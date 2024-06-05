@@ -38,8 +38,8 @@
             <p>Tsunamis Dataset: <a href="https://www.ngdc.noaa.gov/hazel/view/hazards/tsunami/event-search">NOAA Tsunamis Data</a></p>
             <p>These datasets provided the comprehensive information needed for my visual analysis to examine the frequency, magnitude, and impacts of earthquakes and tsunamis in Japan over the past 100 years.</p>
             <div class="image-container">
-                <img src="/earthquakes_data.jpg" alt="Earthquakes dataset screenshot" class="small-image">
-                <img src="/tsunamis_data.jpg" alt="Tsunamis data screenshot" class="small-image">
+                <img src="earthquakes_data.jpg" alt="Earthquakes dataset screenshot" class="small-image">
+                <img src="tsunamis_data.jpg" alt="Tsunamis data screenshot" class="small-image">
             </div>
             <br>
             <p>The target audience for this visualization includes researchers, policymakers, and the general public. Geologists and seismologists can utilize these visualizations to gain deeper insights into the patterns and impacts of earthquakes and tsunamis in Japan. Policymakers and disaster management agencies can use the data to inform decisions related to disaster preparedness, urban planning, and infrastructure development. Additionally, the general public, including educational institutions, can benefit from increased awareness and understanding of these natural disasters, fostering better preparedness and resilience within communities.</p>
@@ -54,11 +54,11 @@
             <p>Next, I focused on illustrating the impact of earthquakes and tsunamis on Japan using a radar chart. This visualization effectively highlighted various impact metrics, such as injuries, deaths, missing, damage, house destroyed and house damage.</p>
             <p>To convey the total damage caused by these natural disasters, I employed a side-by-side bar chart, allowing for a clear comparison between the effects of earthquakes and tsunamis.</p>
             <p>Recognizing the importance of visualizing tsunami water heights, I decided to focus on significant events where the water height was 5.0 meters or higher. Initially, I considered using a ridgeline plot, but it did not provide a clear understanding of the water height or its timing. Consequently, I opted for a bar chart, which clearly illustrated the water height for each year when a tsunami occurred.</p>
-            <img src="/design1.jpg" alt="Sketch design 1" class="large-image">
+            <img src="design1.jpg" alt="Sketch design 1" class="large-image">
             <br>
             <p>Towards the end of the project, I aimed to create a visualization that showed the combined impact of earthquakes and tsunamis in Japan over the last 100 years. My first attempt involved a geospatial heatmap, but it proved ineffective due to issues with color representation. The heatmap either displayed as white or the colors obscured the entire map of Japan. Therefore, I decided to create another geospatial bubble plot, this time incorporating both datasets. Additionally, I adjusted the map's style to enhance accessibility for color-blind users, ensuring the visualization was both informative and accessible.</p>
             <p>In line with principles of effective data visualization, efforts were made to maximize the data-to-ink ratio, ensuring that the visualizations were clear and not cluttered with unnecessary elements. Accessibility considerations, such as color-blind-friendly palettes, were incorporated to make the visualizations more inclusive.</p>
-            <img src="/design2.jpg" alt="Sketch design 2" class="large-image">
+            <img src="design2.jpg" alt="Sketch design 2" class="large-image">
         </section>
         <br>
         <section id="development">
@@ -67,16 +67,16 @@
             <br>
             <p>1. Time series plot for earthquakes</p>
             <p>Using pandas for data manipulation and matplotlib for plotting, I loaded and cleaned earthquake data from a CSV file. The plot showed magnitudes over time, with years on the x-axis and magnitudes on the y-axis. I added customizations like gridlines, titles, and colorblind-friendly palettes for clarity and accessibility.</p>
-            <img src="/img_code/earthquakes_time_series_plot.jpg" alt="Time series of earthquakes" class="large-image">
+            <img src="img_code/earthquakes_time_series_plot.jpg" alt="Time series of earthquakes" class="large-image">
             <br>
             <p>2. Geospatial bubble plot for earthquakes</p>
             <p>I created a geospatial bubble plot of earthquake magnitudes using the pandas library for data manipulation and matplotlib for plotting. The code loaded earthquake data from a CSV file, cleaned and processed it, and then plotted the latitude and longitude of each earthquake event as bubbles on a map. The size of each bubble represented the magnitude of the earthquake. Additional features such as titles and labels were added to enhance the plot's readability and provide context.</p>
-                <img src="/img_code/earthquakes_magnitude_part1.jpg" alt="Earthquakes magnitude">
-                <img src="/img_code/earthquakes_magnitude_part2.jpg" alt="Earthquakes magnitude" >
+                <img src="img_code/earthquakes_magnitude_part1.jpg" alt="Earthquakes magnitude">
+                <img src="img_code/earthquakes_magnitude_part2.jpg" alt="Earthquakes magnitude" >
             <p>Initially, the visualization lacked detail and clarity, as shown in the first image. The basic map was not sufficient to understand the geographical context of the earthquake locations. To address this, I integrated an OpenStreetMap (OSM) layer using the contextily library, which provided a detailed background map. However, it was challenging to ensure that the map covered all of Japan adequately. The second image shows that I had issues with setting up a map that would cover all of Japan, highlighting the difficulty in displaying all necessary location names and details correctly. This integration was essential for improving the visualization's clarity and making the earthquake data more understandable.</p>
             <div class="image-container">
-                <img src="/img_code/eartquake_magnitude_progress1.jpg" alt="Progress and errors" class="small-image">
-                <img src="/img_code/eartquake_magnitude_progress2.jpg" alt="Progress and errors" class="small-image">
+                <img src="img_code/eartquake_magnitude_progress1.jpg" alt="Progress and errors" class="small-image">
+                <img src="img_code/eartquake_magnitude_progress2.jpg" alt="Progress and errors" class="small-image">
             </div>
             <br>
             <p>3. Time series plot and geospatial bubble plot for tsunamis</p>
@@ -84,37 +84,37 @@
             <br>
             <p>4. Earthquakes Impacts and Tsunamis Impacts</p>
             <p>To create the radar chart visualizing the impacts of earthquakes, I began by importing the necessary libraries, such as pandas for data manipulation and matplotlib for plotting. The code loaded the earthquake impact data from a CSV file, which included metrics like injuries, deaths, and property damage. I processed the data to fit the structure required for a radar chart. Using matplotlib, I plotted each impact metric on the radar chart, ensuring that each axis represented a different metric. I customized the chart by changing the colors of the numbers and text to improve visibility and readability, making the data more accessible and easier to interpret.</p>
-            <img src="/img_code/earthquakes_impact_part1.jpg" alt="Earthquakes impacts">
-            <img src="/img_code/earthquakes_impact_part2.jpg" alt="Earthquakes impacts">
+            <img src="img_code/earthquakes_impact_part1.jpg" alt="Earthquakes impacts">
+            <img src="img_code/earthquakes_impact_part2.jpg" alt="Earthquakes impacts">
             <br>
             <p>5. Total damage for both earthquakes and tsunamis to compare</p>
             <p>To create the side-by-side bar chart for visualizing the total damage caused by earthquakes and tsunamis, I used the pandas and matplotlib libraries. The code began by loading the earthquake data from a CSV file, and then I filtered the necessary columns using filtered_data = earthquake_data[['Deaths', 'Missing', 'Injuries', 'Damage ($Mil)', 'Houses Destroyed', 'Houses Damaged']].fillna(0) to handle any missing values. This prepared the data for plotting. I used matplotlib to create the bar charts, plotting each category of damage side-by-side for comparison. I customized the chart by changing the colors of the numbers and text to enhance visibility and readability.</p>
-            <img src="/img_code/total_damage_part1.jpg" alt="Total damage">
-            <img src="/img_code/total_damage_part2.jpg" alt="Total damage">
+            <img src="img_code/total_damage_part1.jpg" alt="Total damage">
+            <img src="img_code/total_damage_part2.jpg" alt="Total damage">
             <br>
             <p>For the tsunami impact, I followed the same process as for the earthquake data, making adjustments to the numbers to reflect the different impact metrics.</p>
             <br>
             <p>6. Tsunamis Water Height (m)</p>
             <p>To create a bar chart visualizing tsunami water heights, I used the pandas library for data manipulation and matplotlib for plotting. The code began by loading tsunami data from a CSV file, filtering for events with a water height of 5.0 meters or higher. The data was then grouped by year, and the maximum water height for each year was calculated. I plotted this data using a bar chart, with the x-axis representing the years and the y-axis representing the maximum water heights. To improve visibility, I adjusted the colors for the numbers and text.</p>
-            <img src="/img_code/tsunami_water_heigh.jpg" alt="Tsunamis water height" class="large-image">
+            <img src="img_code/tsunami_water_heigh.jpg" alt="Tsunamis water height" class="large-image">
             <p>Initially, I planned to use a ridgeline plot to visualize the tsunami water heights, but this approach did not provide a clear understanding of the water heights or their timing. As shown in the first two images, the ridgeline plot made it difficult to interpret the data accurately due to overlapping lines and insufficient distinction between years.</p>
             <div class="image-container">
-                <img src="/img_code/tsunami_height_dev.jpg" alt="Tsunamis height" class="small-image">
-                <img src="/img_code/tsunami_height_dev2.jpg" alt="Tsunamis height" class="small-image">
+                <img src="img_code/tsunami_height_dev.jpg" alt="Tsunamis height" class="small-image">
+                <img src="img_code/tsunami_height_dev2.jpg" alt="Tsunamis height" class="small-image">
             </div>
             <p>When I switched to a bar chart, I encountered an issue where unwanted lines appeared on top of the bars, as circled in the third image. These lines made the chart cluttered and less readable. To resolve this, I needed to adjust the code to remove these extraneous lines, resulting in a clearer and more effective visualization of the tsunami water heights over time.</p>
-            <img src="/img_code/tsunami_height_dev3.jpg" alt="Tsunamis height" class="large-image">
+            <img src="img_code/tsunami_height_dev3.jpg" alt="Tsunamis height" class="large-image">
             <br>
             <p>7. Earthquakes and Tsunamis Occurancies</p>
             <p>To create a geospatial bubble plot of earthquakes and tsunamis, I used pandas for data manipulation and matplotlib for plotting. The code began by loading datasets for both earthquakes and tsunamis from CSV files. I processed the data to extract relevant information, such as latitude, longitude, and magnitude. Using matplotlib, I plotted each event on a map, with bubbles representing earthquakes and tsunamis. The size of the bubbles was proportional to the magnitude of the events. Titles, labels, and legends were added to provide context and improve readability.</p>
-                <img src="/img_code/both_bubble_plot_part1.jpg" alt="Earthquakes and Tsunamis occurrences">
-                <img src="/img_code/both_bubble_plot_part2.jpg" alt="Earthquakes and Tsunamis occurrences">
+                <img src="img_code/both_bubble_plot_part1.jpg" alt="Earthquakes and Tsunamis occurrences">
+                <img src="img_code/both_bubble_plot_part2.jpg" alt="Earthquakes and Tsunamis occurrences">
             <p>Initially, I attempted to create a heatmap to visualize the occurrences of earthquakes and tsunamis. However, I encountered several issues with color adjustments. The colors either did not display correctly or resulted in a white map with no visible data points, as shown in the first two images. These issues made it difficult to create a clear and informative heatmap.</p>
             <div class="image-container">
-                <img src="/img_code/e_and_t.jpg" alt="Earthquakes and Tsunamis Occurancies" class="small-image">
-                <img src="/img_code/e_and_t2.jpg" alt="Earthquakes and Tsunamis Occurancies" class="small-image">
-                <img src="/img_code/e_and_t3.jpg" alt="Earthquakes and Tsunamis Occurancies" class="small-image">
-                <img src="/img_code/e_and_t4.jpg" alt="Earthquakes and Tsunamis Occurancies" class="small-image">
+                <img src="img_code/e_and_t.jpg" alt="Earthquakes and Tsunamis Occurancies" class="small-image">
+                <img src="img_code/e_and_t2.jpg" alt="Earthquakes and Tsunamis Occurancies" class="small-image">
+                <img src="img_code/e_and_t3.jpg" alt="Earthquakes and Tsunamis Occurancies" class="small-image">
+                <img src="img_code/e_and_t4.jpg" alt="Earthquakes and Tsunamis Occurancies" class="small-image">
             </div>
             <p>To resolve these problems, I decided to retain the map and color settings from the last image but switched from a heatmap to a bubble plot. This change ensured that the data points were clearly visible and accurately represented the magnitude of each event. The final visualization effectively combined the geographical distribution of earthquakes and tsunamis with an accessible and understandable format.</p>
             <br>
@@ -122,10 +122,10 @@
             <p>To make the interactive map functional, I started with troubleshooting issues related to its interactivity. Initially, the map displayed static data without the desired interactivity. The first step involved ensuring that the JavaScript and CSS files were correctly linked and loaded. After confirming the HTML structure was accurate and D3.js was properly implemented for loading and parsing earthquake data, I shifted my focus to debugging the JavaScript. Console logs indicated that while data was being parsed, it was not rendered correctly on the map. By inspecting console logs and output, I identified issues with SVG element generation and ensured that coordinates and data bindings were properly set up using D3.js.</p>
             <p>Next, I enhanced the map's interactivity by adding functionality for users to select a year and display relevant earthquake data. I chose a dropdown menu for its simplicity and effectiveness. I added the dropdown, populated it with unique years from the data, and linked it to update the map based on the user's selection. Additionally, I needed to find the longitude and latitude of Japan's cities and prefectures and manually add this information to my data file. To improve user experience, I made styling adjustments to increase the size and visibility of the dropdown menu. Using CSS Flexbox, I modified the page layout to center the dropdown and map elements vertically and horizontally. Finally, I added a title to the page, styled it, and positioned it at the top for visibility. Throughout the process, I tested each change to ensure compatibility and performance, resulting in a fully functional and user-friendly interactive map capable of dynamically displaying earthquake data across different years​​​​.</p>
             <div class="image-container">
-                <img src="/img_code/map1.jpg" alt="Timeline map" class="small-image">
-                <img src="/img_code/map2.jpg" alt="Timeline map" class="small-image">
-                <img src="/img_code/map3.jpg" alt="Timeline map" class="small-image">
-                <img src="/img_code/map4.jpg" alt="Timeline map">
+                <img src="img_code/map1.jpg" alt="Timeline map" class="small-image">
+                <img src="img_code/map2.jpg" alt="Timeline map" class="small-image">
+                <img src="img_code/map3.jpg" alt="Timeline map" class="small-image">
+                <img src="img_code/map4.jpg" alt="Timeline map">
             </div>
         </section>        
         <br>
