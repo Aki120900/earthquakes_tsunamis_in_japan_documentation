@@ -35,9 +35,12 @@ Accessibility Features: Includes high-contrast colors and focus outlines for bet
 ## How to Run:
 
 1. Clone the Repository: Clone the repository to your local machine.
-git clone https://github.com/Aki120900/earthquakes_tsunamis_in_japan_documentation.git
 
-2. Open index.html: Open the index.html file in a web browser to view the webpage.
+```bash
+git clone https://github.com/Aki120900/earthquakes_tsunamis_in_japan_documentation.git
+  ```
+
+3. Open index.html: Open the index.html file in a web browser to view the webpage.
 
 
 ## Data Sources: 
